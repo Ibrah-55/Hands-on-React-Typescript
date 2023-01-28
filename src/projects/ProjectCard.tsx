@@ -22,7 +22,7 @@ export default function ProjectCard(props: ProjectCardProps){
                       <strong>{project.name}</strong>
                 </h5>
                 <p>{Format(project.description)}</p>
-                <p>Budget: {project.budget.toLocaleString()}</p>
+                <p>Budget: ${project.budget.toLocaleString()}</p>
                 <button className="bordered" onClick= {() => {
                      HandleClick(project)
                 } }
