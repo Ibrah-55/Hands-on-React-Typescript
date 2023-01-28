@@ -6,12 +6,13 @@ function Format(description: string){
 }
 interface ProjectCardProps{
     project: Project;
+    onEdit: (project: Project) => void;
 }
 
 export default function ProjectCard(props: ProjectCardProps){
-    const {project} = props;
+    const {project, onEdit} = props;
     const HandleClick = (projecttoEdit: Project) => {
-        console.log( {projecttoEdit})
+        onEdit(projecttoEdit)
     }
     return(
         <div className="card">
