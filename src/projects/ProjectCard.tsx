@@ -1,4 +1,3 @@
-import { format } from "path";
 import React from "react";
 import { Project } from "./Project";
 
@@ -8,8 +7,12 @@ function Format(description: string){
 interface ProjectCardProps{
     project: Project;
 }
+
 export default function ProjectCard(props: ProjectCardProps){
     const {project} = props;
+    const HandleClick = (projecttoEdit: Project) => {
+        console.log( {projecttoEdit})
+    }
     return(
         <div className="card">
             <img src= {project.imageUrl} alt={project.name} />
@@ -19,6 +22,15 @@ export default function ProjectCard(props: ProjectCardProps){
                 </h5>
                 <p>{Format(project.description)}</p>
                 <p>Budget: {project.budget.toLocaleString()}</p>
+                <button className="bordered" onClick= {() => {
+                     HandleClick(project)
+                } }
+                >
+                    <span className="icon-edit"></span>
+                    
+                    Edit
+                </button>
+
 
             </section>
 
