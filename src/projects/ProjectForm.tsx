@@ -1,6 +1,10 @@
 import React from "react";
 
 function ProjectForm() {
+    const edit = () => {
+        
+    }
+
   return (
     <form className="input-group vertical">
       <label htmlFor="name">Project Name</label>

@@ -29,8 +29,9 @@ export default function ProjectCard(props: ProjectCardProps){
                 >
                     <span className="icon-edit"></span>
                     
-                    Edit
+                    
                 </button>
+                
 
 
             </section>
